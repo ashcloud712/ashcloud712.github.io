@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <title>Credit Card Fraud detection using Python | AshCloud712</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">AshCloud712</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-right">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../../../index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../../index.html#portfolio">Portfolio</a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--Main content-->
+    <div class="container">
+        <div class="post-body">
+            <div class="text-center">
+                <img src="img/1.jpg" width="100%"><br />
+                <span class="ml-auto text-muted">Image by Markus Winkler on Unsplash</span>
+            </div>
+            <div class="post-content">
+                <h1>
+                    Credit Card Fraud detection using Python
+                </h1>
+                <span class="text-muted">A study on stacking models to achieve better prediction results.</span>
+                <div class="post-section">
+                    <h3>Summary</h3>
+                    <p>
+                        As estimated, companies lose around 5% of their revenues to fraud. The credit card fraud dataset
+                        is one of the most popular datasets in the data science community, leading to a huge number of
+                        predictor implementations. This model uses a stacked logistic regressor and an XGboost model to
+                        predict the fraudulent transactions with 99.90% accuracy and 0.01% type II errors.
+
+                        While it may be good, the fact that such errors happen in systems where thousands of
+                        transactions are processed each second, the value needs to be further minimised.
+                    </p>
+                </div>
+                <div class="post-section">
+                    <h3>Model performance analysis</h3>
+                    <p>
+                        The logistic regression model demonstrates a fairly good performance with:
+                        <br/> - 99.90% accuracy
+                        <br/> - 36 Type II (false negative) errors per 76,000 test input rows
+                        <br/> - 39 Type I (false positive) errors per 76,000 test input rows
+                        <br/> - 81 correctly classified fraud transactions.
+                        <br />
+                        Per the numbers above, we can see that 0.04% of all transactions are misclassified as non-fraud.
+                        <br /><br />
+                        The XGBoost model has proven to be a better-suiting model for this dataset, with:
+                        <br/> - 99.95% accuracy
+                        <br/> - 8 Type II (false negative) errors per 76,000 input test rows
+                        <br/> - 30 Type I (false positive) errors per 76,000 input test rows
+                        <br/> - 90 correctly classified fraud transactions.
+                        <br />
+                        While the percentage of missed fraud transactions has improved (up to 0.01%), 8 errors per 76,000 transactions are still a big number.
+                        <br /> <br />
+                        The stack model, composed of logistic regression and XGBoost, has performed the best, with:
+                        99.90% accuracy
+                        <br/> - 1 Type II (false negative) error per 76,000 input test rows
+                        <br/> - 46 Type I (false positive) errors per 76,000 input test rows
+                        <br/> - 79 correctly classified fraud transaction.
+                        <br />
+                        The reason behind the bump in type I error count is not clear to me; I suppose both models in stack need fine tuning. However, 1 misclassified fraud transaction per 76,000 transactions is a drastic improvement compared to the solely used models, even though it is still a big issue. I assume more evaluation data would lead to a small bump in type II errors.
+                    </p>
+                </div>
+                <div class="post-section">
+                    <h3>Source code and dataset</h3>
+                    <p>You can download the dataset <a href="https://www.kaggle.com/mlg-ulb/creditcardfraud/download">here</a> and find the Jupyter notebook on <a href="https://github.com/ashcloud712/data/blob/main/CreditCardFraud/CreditCard.ipynb">my GitHub.</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
