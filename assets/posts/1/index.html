@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <title>Analysis of sales data in Google Sheets | AshCloud712</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">AshCloud712</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto align-right">
+          <li class="nav-item active">
+            <a class="nav-link" href="../../../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../../index.html#portfolio">Portfolio</a>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!--Main content-->
+  <div class="container">
+    <div class="post-body">
+      <div class="text-center">
+        <img src="img/1.jpg" width="100%"><br />
+        <span class="ml-auto text-muted">Image by Isaac Smith on Unsplash</span>
+      </div>
+      <div class="post-content">
+        <h1>
+          Analysis of sales data in Google Sheets
+        </h1>
+        <span class="text-muted">An elaborate explorative and prescriptive analysis of anonymous store sales data from
+          2019 in the US using Sheets functions and BigQuery.</span>
+        <div class="post-section">
+          <h3>Summary</h3>
+          <p>
+            The dataset explored contains over 180,000 records of sales of an anonymous electronics store in the US in
+            2019, operating in total of 8 states. Sales were analysed and evaluated based on state and time of the
+            purchase.
+
+            A key performance indicator is found to be likely to increase the store’s profits.
+
+            The analysis is done exclusively in Google Sheets using Sheets functions and SQL (BigQuery) functions.
+
+          </p>
+        </div>
+        <div class="post-section">
+          <h3>Questions</h3>
+          <ul>
+            <li>Which products generate the highest profits?</li>
+            <li>Which products are sold the most?</li>
+            <li>Which months of 2019 have generated the highest profits?</li>
+            <li>What’s the best time and day of the week to sell our products?</li>
+          </ul>
+        </div>
+        <div class="post-section">
+          <h3>Data preparation</h3>
+          <p>The input dataset is in .csv format. It contains 186,851 uncleaned rows, which were found to have
+            duplicates and blank rows. After cleaning, 185,951 unique rows remain.
+
+            Columns were reviewed for incorrect and missing values and those values were corrected. The Price Each
+            column was found to have inconsistent data format (text, number), which was also fixed.
+
+            Additional columns for city, state, time of the day, day of the week and month were created.
+            While exploring the cleaned dataset, inconsistency of order dates versus order IDs was found, which will
+            drive further analysis to be based on the dates of the sales.
+          </p>
+        </div>
+        <div class="post-section">
+          <h3>Exploratory Analysis</h3>
+          <p>The analysis was done using built-in Sheets functions (Excel functions), along with SQL (BigQuery) for data
+            processing, in accordance to the initial questions. </p>
+          <p>Which products generate the highest profits?<br />
+            <span> - For this, all of the products were analysed with respect to the revenues.</span><br /><br />
+            Which products are sold the most?<br />
+            <span> - In this case, the products were analysed with respect to sold quantities.</span><br /><br />
+            Which months of 2019 have generated the highest profits?<br />
+            <span> - Sales were analysed based on months of the respective purchases.</span><br /><br />
+            What’s the best time and day of the week to sell our products?<br />
+            <span> - For this, the dataset was analysed with respect to the time and day of the week of the
+              purchase.</span>
+          </p>
+        </div>
+        <div class="post-section">
+          <h3>Visualization</h3>
+          <p>After the exploratory analysis, two dashboards named Sales Overview and Performance Overview were created.
+            The former shows the sales behaviour in a generalised way, while the latter is the result of the date and
+            time analysis.
+          </p>
+          <img src="img/1.png" width="100%"/><br />
+          <img src="img/2.png" width="100%"/>
+        </div>
+        <div class="post-section">
+          <h3>Conclusions</h3>
+          <p>While the MacBook Pro is the least sold product, it still generates the highest revenue throughout 2019.
+            <br /><br />
+            Times generating the highest revenue are at 12:00 and 19:00 on Tuesdays, while October and December have the best performance in terms of sales.
+            </p>
+        </div>
+        <div class="post-section">
+          <h3>Prescriptive Analysis</h3>
+          <p>After analysing sales of individual products, the MacBook Pro sales were found to bring the highest revenue. An increase in the marketing efforts of the product needs to be considered, as it would potentially lead to higher profits with a small bump in the sales.
+
+            California was found to generate the most revenue among the 8 states the store operates in. Increasing marketing efforts in the state would potentially increase the sales, however, competition and market analysis need to be performed to define the best strategy.            </p>
+        </div>
+      </div>
+      <p><a href="https://docs.google.com/spreadsheets/d/1ERuBEkSHKVqLiRajbjrHNIcPbQOSh-tFxi_d5cwqQIc/edit?usp=sharing">You can access the sheet here.</a></p>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

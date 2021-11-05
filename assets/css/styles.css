@@ -1,0 +1,32 @@
+.intro{
+    padding-top: 20%;
+    padding-bottom: 25%;
+}
+.intro-main{
+    padding-bottom: 20%;
+}
+.avatar-circle{
+    border-radius: 1000px;
+}
+.posts-feed{
+    margin-top: 50px;
+}
+.post-card{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.post-body{
+    margin-top: 5%;
+}
+.post-body img{
+    border-radius: 10px;
+}
+.post-content{
+    margin-top: 20px;
+}
+.post-section{
+    margin-top: 30px;
+}
+.navbar{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
